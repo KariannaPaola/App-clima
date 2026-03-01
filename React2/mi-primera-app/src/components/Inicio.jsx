@@ -1,13 +1,23 @@
 function Inicio({value,onChange,onBuscar}){
-  return(
-  <div className="flex justify-between w-[400px] border-[2px] border-blue-900 border-solid rounded-[30px] p-[10px] shadow-lg shadow-blue-900/50">
-    <input className="w-full bg-cyan-700 dark:bg-gray-950 " type="text" 
+  return (
+  <div className="flex items-center w-[420px] bg-white dark:bg-gray-900 border border-blue-800/70 rounded-full px-4 py-2 shadow-lg shadow-blue-900/20 transition-all duration-300 focus-within:ring-2 focus-within:ring-blue-600 focus-within:border-blue-600">
+
+    <input
+      type="text"
       placeholder="Buscar una ciudad..."
       value={value}
       onChange={onChange}
-      />
-    <button onClick={onBuscar}><i class="fa-solid fa-magnifying-glass"></i></button>
-  </div>)
+      className="flex-1 bg-transparent outline-none text-gray-800 dark:text-gray-200 placeholder-gray-400 text-sm"
+    />
+
+    <button
+      onClick={onBuscar}
+      className="flex items-center justify-center w-9 h-9 rounded-full bg-blue-800 hover:bg-blue-700 active:scale-95 transition-all duration-200 text-white">
+      <i className="fa-solid fa-magnifying-glass text-sm"></i>
+    </button>
+
+  </div>
+);
 }
 
 export{ Inicio };
