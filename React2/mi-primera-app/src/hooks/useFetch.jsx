@@ -1,3 +1,12 @@
+/**
+ * hook para realizar una peticion a una URL y gestionar los estados de resultado y error.
+ *
+ * @param url - La URL desde la cual se va a hacer la peticion
+ * @returns Un objeto con dos propiedades:
+ *   - data: los datos obtenidos en formato JSON
+ *   - error: mensaje de error si ocurrio alguno durante la peticion
+ */
+
 import {useState, useEffect} from "react";
 
 function useFetch(url){
